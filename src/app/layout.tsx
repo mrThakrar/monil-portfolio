@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -85,6 +86,16 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased text-foreground bg-background transition-colors duration-300">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-WGF5HDPZHK" strategy="afterInteractive" />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-WGF5HDPZHK');
+          `}
+        </Script>
         {/* Inject JSON-LD Structured Data */}
         <script
           type="application/ld+json"
