@@ -40,7 +40,6 @@ const config: Config = {
         "float-slow": "float 8s ease-in-out 1s infinite",
         "spin-slow": "spin 20s linear infinite",
         "spin-reverse": "spin-reverse 25s linear infinite",
-        marquee: "marquee 40s linear infinite",
       },
       keyframes: {
         fadeIn: {
@@ -62,10 +61,6 @@ const config: Config = {
         "spin-reverse": {
           "0%": { transform: "rotate(360deg)" },
           "100%": { transform: "rotate(0deg)" },
-        },
-        marquee: {
-          "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-100%)" },
         },
       },
     },

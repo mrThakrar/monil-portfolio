@@ -6,8 +6,8 @@ import {
 } from "lucide-react";
 
 export const siteConfig = {
-    title: "Monil Thakrar | Senior Node.js Developer",
-    description: "Software Developer specializing in Node.js and TypeScript. Transforming complex business logic into high-performance, secure, and resilient APIs.",
+    title: "Monil Thakrar | Senior Software Engineer",
+    description: "Senior Software Engineer specializing in Node.js and TypeScript. Transforming complex business logic into high-performance, secure, and resilient APIs.",
     keywords: [
         "Node.js", "TypeScript", "Backend Developer", "API Development",
         "PostgreSQL", "MongoDB", "AWS", "Stripe", "Software Engineer"
@@ -57,7 +57,7 @@ export const heroContent = {
         line2: "Backend Ecosystems"
     },
     description: {
-        start: "Software Developer specializing in ",
+        start: "Senior Software Engineer specializing in ",
         highlight1: "Node.js",
         middle: " and ",
         highlight2: "TypeScript",
@@ -79,7 +79,7 @@ export const aboutContent = {
         {
             text: "With a deep foundation in the ",
             highlight: "JavaScript/TypeScript ecosystem",
-            end: ", I've spent the last four years solving high-stakes backend challenges at scale."
+            end: ", I've spent the last five years solving high-stakes backend challenges at scale."
         },
         {
             text: "My expertise lies at the intersection of ",
@@ -110,10 +110,20 @@ export const experienceContent = {
 
 export const experienceData = [
     {
-        role: "Senior Backend Developer",
+        role: "Senior Software Engineer",
+        company: "Asquarify",
+        period: "Mar 2026 - Present",
+        description: "Full-time hybrid role in Gujarat, India. Payments and relational data on AWS.",
+        highlights: [
+            "Mangopay payment integrations.",
+            "Amazon Relational Database Service (RDS).",
+        ],
+    },
+    {
+        role: "Software Engineer",
         company: "Zignuts Technolab",
-        period: "Feb 2024 - Present",
-        description: "Architecting high-concurrency microservices and leading backend engineering for core SaaS products. Defined API standards and mentored junior developers.",
+        period: "Jan 2024 - Mar 2026",
+        description: "Backend services for core SaaS products with NestJS and Django. Hybrid, Gandhinagar.",
         highlights: [
             "Designed real-time event-driven architectures serving 10k+ concurrent users.",
             "Optimized PostgreSQL queries, reducing complex report generation time by 40%.",
@@ -123,7 +133,7 @@ export const experienceData = [
     {
         role: "Web Developer",
         company: "Zignuts Technolab",
-        period: "Feb 2022 - Feb 2024",
+        period: "Jan 2023 - Jan 2024",
         description: "Developed and maintained RESTful APIs for mobile and web ecosystems, acting as the primary backend engineer for critical client projects.",
         highlights: [
             "Built multi-tenant database architectures for B2B applications.",
@@ -134,7 +144,7 @@ export const experienceData = [
     {
         role: "Junior Web Developer",
         company: "Zignuts Technolab",
-        period: "Jul 2021 - Feb 2022",
+        period: "Jul 2021 - Jan 2023",
         description: "Assisted in the development of robust backend systems and maintained existing applications.",
         highlights: [
             "Collaborated with senior engineers to implement new core features.",
@@ -213,7 +223,7 @@ export const projectsContent = {
     description: "Deep dives into the architecture and engineering decisions behind real-world scalable applications.",
     projects: [
         {
-            title: "Cater Master",
+            title: "Hotels Monitoring Management System",
             year: "2025",
             concept: "Multi-tenant SaaS for catering management",
             icon: Building2,
@@ -225,7 +235,7 @@ export const projectsContent = {
             bgAccent: "bg-emerald-50 dark:bg-emerald-500/10",
         },
         {
-            title: "Co-Tasker",
+            title: "Skilled Helpers Service Management System",
             year: "2024",
             concept: "Community marketplace for skilled services",
             icon: Users,
@@ -237,7 +247,7 @@ export const projectsContent = {
             bgAccent: "bg-cyan-50 dark:bg-cyan-500/10",
         },
         {
-            title: "Purple PRN",
+            title: "Hospital Job Management System",
             year: "2024",
             concept: "Healthcare staffing platform",
             icon: Stethoscope,
@@ -361,7 +371,7 @@ export const contactContent = {
     terminal: {
         title: "setup-contact.sh",
         command: "$ whoami",
-        response: "Monil Thakrar - Senior Backend Engineer",
+        response: "Monil Thakrar - Senior Software Engineer",
         fileCommand: "$ cat contact.json"
     }
 };
@@ -371,7 +381,7 @@ export const footerContent = {
         highlight: "Monil",
         rest: "Thakrar"
     },
-    subtitle: "Senior Backend Developer",
+    subtitle: "Senior Software Engineer",
     copyrightName: "Monil Thakrar",
     socialLinks: [
         { icon: Github, href: contactInfo.github, label: "GitHub" },

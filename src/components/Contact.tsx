@@ -57,7 +57,7 @@ export default function Contact() {
                                 <div className="p-6 font-mono text-sm leading-loose">
                                     <div className="text-emerald-400">$ whoami</div>
                                     <div className="text-zinc-300 mb-4">
-                                        Monil Thakrar - Senior Backend Engineer
+                                        Monil Thakrar - Senior Software Engineer
                                     </div>
 
                                     <div className="text-emerald-400">$ cat contact.json</div>

@@ -5,47 +5,42 @@ import { techStackContent } from "../data/content";
 
 export default function TechStack() {
     return (
-        <section id="stack" className="relative py-24 border-y border-zinc-200/50 dark:border-zinc-800/50 bg-zinc-50/50 dark:bg-zinc-900/20 overflow-hidden">
-            <div className="max-w-6xl mx-auto px-6 mb-12 text-center">
+        <section id="stack" className="relative overflow-hidden border-y border-zinc-200/50 bg-zinc-50/50 py-24 dark:border-zinc-800/50 dark:bg-zinc-900/20">
+            <div className="pointer-events-none absolute inset-0 bg-grid opacity-50 dark:opacity-30" />
+            <div className="pointer-events-none absolute left-1/2 top-0 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-emerald-500/70 to-transparent" />
+            <div className="pointer-events-none absolute left-1/2 top-1/2 h-56 w-[36rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-emerald-500/10 blur-3xl" />
+
+            <div className="relative mx-auto max-w-5xl px-6">
                 <AnimatedSection>
-                    <span className="text-emerald-600 dark:text-emerald-500 font-mono text-xs uppercase tracking-widest font-semibold mb-3 block">
-                        {techStackContent.badge}
-                    </span>
-                    <h2 className="text-2xl font-bold text-zinc-900 dark:text-white">
-                        {techStackContent.heading}
-                    </h2>
+                    <div className="mb-12 text-center">
+                        <span className="mb-3 block font-mono text-xs font-semibold uppercase tracking-[0.25em] text-emerald-600 dark:text-emerald-400">
+                            {techStackContent.badge}
+                        </span>
+                        <h2 className="text-3xl font-bold text-zinc-900 dark:text-white sm:text-4xl">
+                            {techStackContent.heading.replace(/Room$/, "")}
+                            <span className="gradient-text">Room</span>
+                        </h2>
+                    </div>
                 </AnimatedSection>
-            </div>
 
-            <div className="relative flex w-full flex-col items-center justify-center overflow-hidden">
-                {/* Left fade */}
-                <div className="absolute left-0 top-0 z-10 h-full w-[150px] bg-gradient-to-r from-zinc-50 dark:from-[#09090b] to-transparent pointer-events-none" />
-                {/* Right fade */}
-                <div className="absolute right-0 top-0 z-10 h-full w-[150px] bg-gradient-to-l from-zinc-50 dark:from-[#09090b] to-transparent pointer-events-none" />
-
-                <div className="flex w-[200%] gap-8 animate-marquee whitespace-nowrap group hover:[animation-play-state:paused]">
-                    {[...techStackContent.stack, ...techStackContent.stack, ...techStackContent.stack].map((tech, i) => (
-                        <div
-                            key={`${tech.name}-${i}`}
-                            className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-300 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/10 cursor-default"
-                        >
-                            <tech.icon className="text-zinc-400 dark:text-zinc-500 group-hover/card:text-emerald-500 transition-colors" size={20} />
-                            <span className="text-zinc-700 dark:text-zinc-300 font-semibold">{tech.name}</span>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Reverse marquee */}
-                <div className="flex w-[200%] gap-8 animate-marquee whitespace-nowrap group hover:[animation-play-state:paused] mt-6" style={{ animationDirection: "reverse" }}>
-                    {[...techStackContent.stack, ...techStackContent.stack, ...techStackContent.stack].reverse().map((tech, i) => (
-                        <div
-                            key={`rev-${tech.name}-${i}`}
-                            className="flex items-center gap-3 px-6 py-4 rounded-2xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 shadow-sm transition-all duration-300 hover:border-emerald-500/50 dark:hover:border-emerald-500/50 hover:-translate-y-1 hover:shadow-lg hover:shadow-emerald-500/10 cursor-default"
-                        >
-                            <tech.icon className="text-zinc-400 dark:text-zinc-500 group-hover/card:text-emerald-500 transition-colors" size={20} />
-                            <span className="text-zinc-700 dark:text-zinc-300 font-semibold">{tech.name}</span>
-                        </div>
-                    ))}
+                <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                    {techStackContent.stack.map((tech, i) => {
+                        const Icon = tech.icon;
+                        return (
+                            <AnimatedSection key={tech.name} delay={i * 0.05}>
+                                <div className="group relative flex h-full flex-col items-center gap-4 overflow-hidden rounded-2xl border border-zinc-200/80 bg-white/80 px-4 py-7 text-center shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-[0_16px_40px_rgba(16,185,129,0.14)] dark:border-zinc-800 dark:bg-zinc-950/70">
+                                    <span className="font-mono text-[10px] tracking-[0.2em] text-zinc-400 dark:text-zinc-600">
+                                        {String(i + 1).padStart(2, "0")}
+                                    </span>
+                                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-500/10 text-emerald-600 ring-1 ring-emerald-500/15 transition-all duration-300 group-hover:bg-emerald-500 group-hover:text-white group-hover:shadow-[0_0_24px_rgba(16,185,129,0.45)] dark:text-emerald-400">
+                                        <Icon size={24} strokeWidth={1.5} />
+                                    </span>
+                                    <span className="text-sm font-medium text-zinc-800 dark:text-zinc-100">{tech.name}</span>
+                                    <span className="absolute inset-x-8 bottom-0 h-px origin-center scale-x-0 bg-gradient-to-r from-transparent via-emerald-400 to-transparent transition-transform duration-300 group-hover:scale-x-100" />
+                                </div>
+                            </AnimatedSection>
+                        );
+                    })}
                 </div>
             </div>
         </section>

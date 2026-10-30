@@ -63,7 +63,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: siteConfig.author,
-  jobTitle: "Senior Backend Developer",
+  jobTitle: "Senior Software Engineer",
   url: siteConfig.siteUrl,
   sameAs: [
     contactInfo.github,
